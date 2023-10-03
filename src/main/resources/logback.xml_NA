@@ -1,0 +1,27 @@
+<configuration>
+	<appender name="ASYNC_CONSOLE"
+		class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender">
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+				<includeCallerData>true</includeCallerData>
+			</encoder>
+		</appender>
+
+	</appender>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+		<encoder>
+			<pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+	<!--logger name="com.spglobal.platts.realtime" level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <Logger name="software.amazon.awssdk" level="WARN" />
+    <Logger name="software.amazon.awssdk.request" level="DEBUG" /-->
+</configuration>
