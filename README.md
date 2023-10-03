@@ -1,4 +1,4 @@
-# Springboot3-swagger-wemvc-ui
+# Springboot3-swagger-webmvc-ui
 This example of swagger-ui with springdoc-openapi-starter-webmvc-ui
 
 https://www.javainuse.com/spring/boot_swagger3
